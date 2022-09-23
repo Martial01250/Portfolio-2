@@ -297,6 +297,9 @@ nav {
     overflow: hidden;
 }
 
+#decoName {
+    text-decoration: none;
+}
 #photoOfMe {
     justify-content: end;
     margin-top: 5px;
@@ -317,7 +320,7 @@ nav {
 }
 
 #information {
-    margin-top: 28%;
+    margin-top: 13%;
 }
 
 #winLeftBottom {
