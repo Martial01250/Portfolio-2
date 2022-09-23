@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "inter";
+    src: url(font/static/Inter-Regular.ttf);
+}
+
+* {
+    font-family: "inter";
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(92, 91, 91, 1);
+}
+
+/** regroupement styles beaucoup utilisé */
+
+.backgroundWhite {
+    background-color: #fff;
+}
+
+.boxShadow {
+    box-shadow: 10px 5px 15px rgb(29, 29, 29);
+}
+
+.boxShadowNegative {
+    box-shadow: -10px -5px 15px rgb(29, 29, 29);
+}
+
+.flex {
+    display: flex;
+}
+
+.itemsCenter {
+    align-items: center;
+}
+
+/** Layout 1st page */
+
+#container {
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+}
+
+#viewRight {
+    flex-direction: column;
+    justify-content: space-evenly;
+    outline: 4px solid black;
+    height: 99%;
+    width: 20.3%;
+}
+
+#viewLeft {
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: 100%;
+    width: 79.7%;
+}
+
+#topMain {
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 50%;
+}
+
+#middleMain {
+    height: 25%;
+}
+
+#bottomMain {
+    justify-content: center;
+    align-items: flex-end;
+    height: 20%;
+}
+
+#hello {
+    margin: 5% 2% 1% 4%;
+    font-size: 5.6rem;
+}
+
+#Iam {
+    margin: 2% 2% 1% 4%;
+    font-size: 5.6rem;
+}
+
+#decorationMain {
+    transform: rotate(-45deg);
+    margin-left: 1%;
+    height: 3px;
+    width: 10%;
+}
+
+#decorationMain2 {
+    margin-left: 1%;
+    height: 3px;
+    width: 30%;
+}
+
+#start {
+    text-decoration: none;
+    font-size: 3.6rem;
+}
+
+#link {
+    text-decoration: none;
+}
+
+#year,
+#year2 {
+    font-size: 5rem;
+    transform: rotate(-90deg);
+    color: black;
+}
+
+#decorationRight {
+    height: 25%;
+    width: 1%;
+    background-color: black;
+}
+
+/** menu burger */
+#burger {
+    width: 40px;
+    height: 4px;
+    background: rgb(0, 0, 0);
+    display: inline-block;
+    position: relative;
+}
+
+#burger::before,
+#burger::after {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background: rgb(0, 0, 0);
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+#burger::before {
+    top: -7px;
+}
+
+#burger::after {
+    top: 7px;
+}
+
+#burger.open {
+    background: transparent;
+}
+
+#burger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    background: rgb(0, 0, 0);
+    width: 90%;
+    height: 100%;
+    left: 0;
+    top: 100%;
+    padding: 10px 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.3s ease;
+}
+
+ul.open {
+    margin-top: 12px;
+    transform: scaleY(1);
+}
+
+ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* *end burger  */
+
+#year,
+#year2 {
+    font-size: 5.4rem;
+    transform: rotate(-90deg);
+}
+
+#decorationRight {
+    height: 25%;
+    width: 1%;
+    background-color: black;
+}
+
+/* ***responsive*** page 1 */
+
+@media (max-width: 1200px) {
+    #container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 90%;
+    }
+
+    #viewRight {
+        flex-direction: row-reverse;
+        position: absolute;
+        justify-content: space-evenly;
+        outline: 4px solid black;
+        height: 20%;
+        width: 99%;
+    }
+
+    #viewLeft {
+        flex-direction: column;
+        justify-content: flex-end;
+        /* align-items: center; */
+        background-color: black;
+        height: 100%;
+        width: 79.7%;
+    }
+
+    #year,
+    #year2 {
+        font-size: 5.4rem;
+        transform: rotate(-0deg);
+    }
+
+    #decorationRight {
+        height: 1%;
+        width: 25%;
+        background-color: black;
+    }
+
+    #middleMain {
+        height: 7%;
+    }
+}
+
+/* ***************************** END *********************************** */
+
+/* * Layout about-me */
+
+/* *Left part */
+
+#windowLeft {
+    background-color: black;
+    height: 100%;
+    width: 49.9%;
+}
+
+#windowSeparation {
+    background-color: rgb(224, 224, 224);
+    outline: #fff 1px solid;
+    box-shadow: 10px 5px 15px #fff;
+    height: 100%;
+    width: 1px;
+}
+
+#winLeftTop {
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+}
+
+#winLeftMiddle {
+    width: 100%;
+    height: 35%;
+}
+
+#pictureFrame {
+    margin-left: 4px;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+}
+
+#photoOfMe {
+    justify-content: end;
+    margin-top: 5px;
+    width: 95%;
+    height: 85%;
+    background-image: url(./imgs/IMG_20220628_120019.jpg);
+    background-size: cover;
+}
+
+#rectangle {
+    width: 20px;
+    height: 20px;
+}
+
+#informationFrame {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#information {
+    margin-top: 28%;
+}
+
+#winLeftBottom {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#pageNumber {
+    width: 50%;
+    text-align: end;
+}
+
+#dev, #full {
+    font-size: 24px;
+}
+
+#study,
+#experience {
+    margin-left: 5px;
+    margin-top: 8.5%;
+    flex-direction: column;
+    text-align: center;
+}
+
+#experience {
+    width: 50%;
+}
+
+#Title {
+    text-align: center;
+}
+
+/* * Right part about-me*/
+#windowRight {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: black;
+    height: 100%;
+    width: 49.9%;
+}
+
+#winRightTop {
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+
+#winRightMid,
+#winRightMid2,
+#winRightBottom,
+#winRightBottom2 {
+    flex-direction: column;
+    width: 50%;
+    height: 42.5%;
+    text-align: center;
+}
+
+#nextPage {
+    width: 50%;
+    text-align: end;
+    font-size: 2rem;
+}
+
+#nextPageLink {
+    text-decoration: none;
+}
+
+#nextPageLink :hover {
+    cursor: pointer;
+}
+
+
+/* ***************************** END *********************************** */
