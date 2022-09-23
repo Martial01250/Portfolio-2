@@ -344,6 +344,7 @@ nav {
     margin-top: 8.5%;
     flex-direction: column;
     text-align: center;
+    margin-right: 15px;
 }
 
 #experience {
